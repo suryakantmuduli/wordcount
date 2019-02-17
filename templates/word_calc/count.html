@@ -1,0 +1,20 @@
+<h1>total no. of word is {{ lines }}</h1>
+
+<a href="{% url 'home' %}">start again</a>
+
+<br />
+
+<a href="{% url 'about' %}">about</a>
+
+<h1>my text:</h1>
+
+{{ textbox }}
+
+<h1>word count:</h1>
+
+{% for word, counttotal in worddictionary %}
+{{word}} - {{counttotal}}
+
+<br />
+
+{%endfor%}
